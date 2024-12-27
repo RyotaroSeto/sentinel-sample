@@ -1,0 +1,4 @@
+hello = func() {
+    print("Hello, 世界！")
+    return undefined
+}

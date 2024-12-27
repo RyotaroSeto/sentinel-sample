@@ -1,0 +1,16 @@
+{
+	"records": [
+		{
+			"key": "opening-hours",
+			"source": "./opening-hours.sentinel",
+			"sourceSum": "",
+			"dest": "/Users/ryotaroseto/Documents/doc/sentinel-sample/opening-hours.sentinel"
+		},
+		{
+			"key": "weeked",
+			"source": "./weekend.sentinel",
+			"sourceSum": "",
+			"dest": "/Users/ryotaroseto/Documents/doc/sentinel-sample/weekend.sentinel"
+		}
+	]
+}

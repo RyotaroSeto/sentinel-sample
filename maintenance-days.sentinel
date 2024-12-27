@@ -1,0 +1,20 @@
+maintenance_days = [
+    {
+        "day": "Wednesday",
+        "hour": 9,
+    },
+    {
+        "day": "Friday",
+        "hour": 1,
+    },
+    {
+        "day": "Sunday",
+        "hour": 1,
+    },
+]
+
+main = rule {
+    filter maintenance_days as d {
+        d.hour >= 6
+    }
+}

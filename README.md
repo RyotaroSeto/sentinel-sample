@@ -1,0 +1,5 @@
+- sentinel apply -trace maintenance-days.sentinel
+- sentinel test opening-hours.sentinel
+- sentinel apply
+- policy公開レポ
+  - https://github.com/hashicorp/terraform-sentinel-policies

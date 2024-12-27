@@ -1,0 +1,15 @@
+day = "Monday"
+homework = ""
+school_today = true
+
+// 週末かどうか判定
+is_weekend = rule {day in ["Saturday", "Sunday"]}
+
+// 週末かつ宿題がないかどうか判定
+is_valid_weekend = rule{is_weekend and homework is ""}
+
+// 学校が休みかつ宿題がないかどうか判定
+is_valid_weekday = rule{not is_weekend and not school_today and homework is ""}
+
+// 友達と遊びに行けるかどうか判定
+main = rule{ is_valid_weekend or is_valid_weekday}

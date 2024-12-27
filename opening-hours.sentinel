@@ -1,0 +1,7 @@
+param day
+param hour
+
+is_weekday = rule{day not in ["Saturday", "Sunday"]}
+is_open_hours = rule{hour >= 8 and hour <= 17}
+
+main = rule{ is_open_hours and is_weekday}

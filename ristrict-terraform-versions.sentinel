@@ -1,0 +1,18 @@
+// Terraformのversionが1.2.2よりも小さい場合は失敗
+import "tfplan/v2" as tfplan
+
+min_allowed_version = "1.2.2"
+violations = 0
+
+
+if (tfplan.terraform_version < min_allowed_version) {
+  violations = 1
+  print("You are using terraform version", tfplan. terraform_version, "w
+hich is outdated. Please use any version higher than or equal to", min_a
+llowed_version)
+}
+
+
+main rule {
+  violations is 0
+}

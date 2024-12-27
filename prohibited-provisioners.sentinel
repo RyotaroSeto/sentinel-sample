@@ -1,0 +1,13 @@
+// プロビジョナーの禁止
+
+import "tfconfig-functions" as config
+
+prohibited_list = ["local-exec", "remote-exec"]
+
+allProvisioners = config.find_all_provisoners()
+violatingProvisioners = config.filter_attribute_in_list(allProvisioners, "type", prohibited_list, false)
+config.print_violations(violatingProvisioners["messages"], "A provisioner of")
+
+main = rule {
+    length(violatingProvisioners["messages"]) is 0
+}
